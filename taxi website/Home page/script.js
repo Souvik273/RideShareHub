@@ -1,25 +1,3 @@
-// let menu = document.querySelector("#navbar");
-// let nav = document.querySelector(".menu");
-
-// let showcontactform = document.querySelector(".contact");
-// let myform = document.querySelector(".contact-form")
-
-// let formclose = document.querySelector("#form-close")
-
-
-
-
-// menu.onclick = () =>{
-//     menu.classList.toggle("fa-times")
-//     nav.classList.toggle("active")
-// }
-// showcontactform.onclick = () =>{
-//     myform.classList.toggle('active')
-// }
-// formclose.onclick = () =>{
-//     myform.classList.remove('active')
-// }
-
 document.addEventListener('DOMContentLoaded', (event) => {
     const navItems = document.querySelectorAll('nav a');
     const scrollTopBtn = document.getElementById('scrollTopBtn');
@@ -88,8 +66,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const button = document.querySelector(".contact");
+    const button = document.querySelector(".sign-up");
     button.addEventListener('click', () => {
-        window.location.href = "../Contact Us/contactus.html"; 
+        window.location.href = "../Log-In/login.html"; 
     });
 });
