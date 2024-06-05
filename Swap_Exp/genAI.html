@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ride Share Helper</title>
+</head>
+<body>
+    <h1>Ride Share Helper</h1>
+    <p>Hi! I'm your friendly ride share assistant. Ask me anything about using our app to get a ride.</p>
+    <input type="text" id="userQuestion" placeholder="Type your question here">
+    <button onclick="askGemini()">Ask</button>
+    <div id="answer"></div>
+
+    <script src="https://unpkg.com/@google/generative-ai"></script>  <script>
+        function askGemini() {
+            const userQuestion = document.getElementById("userQuestion").value;
+            const API_KEY = "AIzaSyAGVS6nZ_HiUyCgdniXPHEa_9Q0zLPGn30"; // Replace with your actual API key
+
+            if (userQuestion.trim() === "") {
+                document.getElementById("answer").innerText = "Please enter your question.";
+                return;
+            }
+
+            const prompt = "You are a customer service bot for a ride sharing application. Answer the user's question in a helpful and informative way. Do not entertain questions outside the scope of the ride sharing app. If the question is vague, ask for clarification. If further assistance is needed, suggest connecting to a human representative." + 
+                "\nUser question: " + userQuestion;
+
+            const genAI = new GoogleGenerativeAI(API_KEY);
+            const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+            model.generateContent(prompt)
+                .then(result => result.response)
+                .then(text => document.getElementById("answer").innerText = text)
+                .catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>
