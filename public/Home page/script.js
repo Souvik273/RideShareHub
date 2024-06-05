@@ -73,5 +73,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 document.getElementById('book-cab').addEventListener('click', function() {
-    window.location.href = '../map/index.html';
+    window.location.href = '../map/map.html';
 });
