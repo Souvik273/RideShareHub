@@ -49,21 +49,84 @@ function calculateAndDisplayRoute() {
 window.onload = initMap;
 
 // choose a cab 
+document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault(); // prevent default form submission behavior
+    loadRideOptions();
+  
+    // // Update the width of the map div
+    document.getElementById('map').style.width = '30%';
+  });
+  function getRandomPrice(base) {
+    return (base + Math.random() * 50).toFixed(2);
+}
+let stripe = Stripe('your-publishable-key-here'); // Replace with your Stripe publishable key
+function loadRideOptions() {
+    const rides = [
+        {
+            type: "Ride Go",
+            description: "Affordable compact rides",
+            basePrice: 300,
+            time: "7 mins away · 2:24 AM",
+            icon: "public/images/logo.png"
+        },
+        {
+            type: "Go Sedan",
+            description: "Affordable sedans",
+            basePrice: 350,
+            time: "4 mins away · 2:23 AM",
+            icon: "path/to/go_sedan_icon.png"
+        },
+        {
+            type: "Premier",
+            description: "Comfortable sedans, top-quality drivers",
+            basePrice: 400,
+            time: "4 mins away · 2:25 AM",
+            icon: "path/to/premier_icon.png"
+        }
+    ];
 
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+    const container = document.getElementById("ride-selection");
+    container.innerHTML = "";
 
-    let newDiv = document.querySelector('.cab-book');
-    if (!newDiv) {
-        newDiv = document.createElement('div');
-        newDiv.className = 'cab-book';
-        newDiv.textContent = 'Content of Div 3';
-        document.querySelector('#ride-section').insertBefore(newDiv, document.querySelector('.map'));
-    }
+    rides.forEach(ride => {
+        const randomPrice = getRandomPrice(ride.basePrice);
+        const oldPrice = (ride.basePrice + 40).toFixed(2);
 
-    // Show the new div and adjust the width of the second div
-    newDiv.style.display = 'block';
-    document.querySelector('.map').style.width = '30%';
-});
+        const rideDiv = document.createElement("div");
+        rideDiv.className = "ride-option";
 
+        rideDiv.innerHTML = `
+            <img src="${ride.icon}" alt="${ride.type}">
+            <div class="ride-info">
+                <div class="ride-title">${ride.type}</div>
+                <div class="ride-details">${ride.time}</div>
+                <div class="ride-details">${ride.description}</div>
+                <div class="ride-price">
+                    <span class="ride-discount">25% off</span> ₹${randomPrice}
+                    <span class="old-price">₹${oldPrice}</span>
+                </div>
+            </div>
+            <button class="select-ride-button" style="display: none;">Select Ride</button>
+        `;
+
+        // Add click event listener to each ride option
+        rideDiv.addEventListener('click', () => {
+            // Remove the selected-ride class from all ride options
+            document.querySelectorAll('.ride-option').forEach(option => {
+                option.classList.remove('selected-ride');
+                option.querySelector('.select-ride-button').style.display = 'none';
+            });
+        
+            // Add the selected-ride class to the clicked ride option
+            rideDiv.classList.add('selected-ride');
+            rideDiv.querySelector('.select-ride-button').style.display = 'inline-block';
+
+            
+        });
+        rideDiv.querySelector('.select-ride-button').addEventListener('click', () => {
+            window.location.href = 'payment.html';
+        });
+        container.appendChild(rideDiv);
+    });
+}
 

@@ -83,110 +83,60 @@ nav a.active {
   transition: width 0.3s;
 }
 
-/* Header Section end */
-.ride-section{
+/* payment  */
+.payment-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f6f6f6;
 }
-.location-selection{
-    margin-top:3%;
-    margin-left: 3%;
-    padding: 2% ;
-    width:20%;
+
+.payment-container {
+    background: white;
+    padding: 2rem;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+}
+
+.payment-container h2 {
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 2rem;
+    color: #333;
 }
-.location-selection h2{
-    font-size: 20px;
-    color: black;
-}
-label{
+
+.payment-container label {
+    font-size: 1rem;
+    color: #333;
     display: block;
-    margin-bottom: 16px;
-    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.payment-container input[type="text"],
+.payment-container input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.payment-container input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
     font-weight: bold;
-    color:#111;
-    text-align: left;
-    font-size: 18px;
-}
-input[type="text"],
-input[type="time"],
-input[type="submit"]{
-    padding: 14px;
-    margin-bottom: 16px;
-    border: 2px solid;
-    width: 90%;
-    outline: none;
-    border-radius: 8px;
-    font-size: 16px;
-}
-#map {
-    margin-top:3%;
-    margin-right: 3%;
-    padding: 2% ;
-    width:60%;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#ride-selection {
-  font-family: Arial, sans-serif;
+.payment-container input[type="submit"]:hover {
+    background-color: #ffb83d;
 }
-.ride-option {
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 15px;
-  margin-top: 15%;
-}
-.selected-ride {
-  border: 2px solid var(--main-color);
-  box-shadow: 0 0 10px var(--main-color);
-}
-
-.ride-option img {
-  width: 50px;
-  vertical-align: middle;
-}
-.ride-info {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 15px;
-}
-.ride-title {
-  font-weight: bold;
-  font-size: 18px;
-}
-.ride-details {
-  color: #555;
-}
-.ride-price {
-  font-weight: bold;
-  font-size: 20px;
-}
-.ride-discount {
-  color: green;
-}
-.old-price {
-  text-decoration: line-through;
-  color: #999;
-}
-.select-ride-button {
-  padding: 10px 20px;
-  background-color: var(--main-color);
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.select-ride-button:hover {
-  background-color: #ffb83d;
-}
-
+/* footer */
 .main-footer{
     margin-top: 3%;
     padding: 2rem 7%;

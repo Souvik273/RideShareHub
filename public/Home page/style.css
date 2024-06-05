@@ -95,7 +95,7 @@ nav a.active {
   opacity: 0;
   animation: slideTop 2s ease forwards;
   animation-delay: calc(.2s * var(--i));
-  
+  gap: 5px;
 }
 .sign-up::before{
   content: "";

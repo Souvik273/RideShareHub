@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
     const button = document.querySelector(".sign-up");
     button.addEventListener('click', () => {
-        window.location.href = "../Log-In/login.html"; 
+        window.location.href = "https://rideshare.streamlit.app/"; 
     });
 });
 
