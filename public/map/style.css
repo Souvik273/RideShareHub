@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#fcb900;
+    --blackcolor:#1B1B1B;
+    --graycolortxt:#74787C;
+    --black2:#54595F;
+    --smoke-color:#F5F5F5;
+    --shadow:#dee1e8;
+  }
+  
+  *{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+  }
+  
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+header{
+    padding: 2rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-image: linear-gradient(130deg, white 30%, var(--main-color) -50%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    z-index: 1000; 
+  }
+
+header .logo img{
+  width: 75px;
+}
+.logo{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    max-height: 50px;
+    height: auto;
+    width: auto;
+}
+.navbar a {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem;
+  margin-left: 1.5rem;
+  transition: .3s;
+  text-align: center;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover,
+nav a.active {
+  color: #fff;
+}
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  background: #1B1B1B;
+  transition: width 0.3s;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.sign-up{
+  padding: 1.5rem 31px;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  transform: skew(-20deg);
+  position: relative;
+  background-color: var(--blackcolor);
+  opacity: 0;
+  animation: slideTop 2s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+  
+}
+.sign-up::before{
+  content: "";
+  background: var(--graycolortxt);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.sign-up:hover::before{
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+}
+.ride-selection {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.location-selection{
+    margin-top: 6.5%;
+  align-items: center;
+    border: 2px solid ;
+    width: 33.33%;
+}
+.location-selection label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.location-selection input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.ride-type {
+    margin-top: 5%;
+    width: 33.33%;
+}
+
+.ride-type h2 {
+    margin-bottom: 20px;
+}
+
+.ride-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.ride-card h3 {
+    margin: 0;
+}
+
+.ride-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.ride-card .discount {
+    font-size: 12px;
+    color: green;
+}
+
+.ride-card button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.map img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+#map {
+    height: 500px;
+    width: 33%;
+}
+
+.main-footer{
+    padding: 2rem 7%;
+    background: var(--shadow);
+  }
+  .footer-heading h1{
+    text-align: center;
+    padding: 1rem;
+    font-size: 40px;
+  }
+  .main-inner-footer{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  
+  }
+  .footer-content{
+    flex: 1 1 280px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .footer-content img{
+    width: 100px;
+  }
+  .footer-content a{
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .logo-text{
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+  
+  @keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  

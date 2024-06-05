@@ -73,5 +73,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 document.getElementById('book-cab').addEventListener('click', function() {
-    window.location.href = '/ride-share-hub/app';
+    window.location.href = '../map/index.html';
 });

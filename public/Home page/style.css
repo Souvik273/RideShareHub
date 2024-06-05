@@ -229,17 +229,16 @@ nav a.active {
   transition: all 0.5s;
   
 }
-.important-btn button:hover{
-  transform: scale(1.1);
-  background-color: #1B1B1B;
-  color: #dee1e8;
-}
+
 .important-btn:hover::before{
   top: 0;
   height: 100%;
   cursor: pointer;
 }
 
+.important-btn::after{
+  color: #F5F5F5;
+}
 /* home section ended */
 
 /* business partner starts */
