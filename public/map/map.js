@@ -47,3 +47,23 @@ function calculateAndDisplayRoute() {
 
 // Initialize the map when the window loads
 window.onload = initMap;
+
+// choose a cab 
+
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let newDiv = document.querySelector('.cab-book');
+    if (!newDiv) {
+        newDiv = document.createElement('div');
+        newDiv.className = 'cab-book';
+        newDiv.textContent = 'Content of Div 3';
+        document.querySelector('#ride-section').insertBefore(newDiv, document.querySelector('.map'));
+    }
+
+    // Show the new div and adjust the width of the second div
+    newDiv.style.display = 'block';
+    document.querySelector('.map').style.width = '30%';
+});
+
+

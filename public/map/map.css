@@ -130,6 +130,12 @@ input[type="submit"]{
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.cab-book {
+  width: 30%;
+  background-color: lightcoral;
+  padding: 10px;
+  display: none;
+}
 
 .main-footer{
     margin-top: 3%;

@@ -29,13 +29,15 @@
     <section class="ride-section">
         <div class="location-selection">
             <h2>Enter Your Pick-Up and drop location</h2>
-                <label for="pickup">From</label>
-                <input type="text" id="pickup"required>
-                <label for="drop">To</label>
-                <input type="text" id="drop" required>
-                <label for="pickup-time">Pickup</label>
-                <input type="time" id="pickup-time" value="Pickup now" required>
-                <input type="submit" id="find-route" value="Request"></input>
+                <form id="form">
+                    <input type="text" id="pickup"required>
+                    <label for="pickup">From</label>
+                    <label for="drop">To</label>
+                    <input type="text" id="drop" required>
+                    <label for="pickup-time">Pickup</label>
+                    <input type="time" id="pickup-time" value="Pickup now" required>
+                    <input type="submit" id="find-route" value="Request"></input>
+                </form>
         </div>
         <div id="map"></div>
     </section>
