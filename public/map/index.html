@@ -11,6 +11,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,55 +19,26 @@
 
         <nav class="navbar">
             <a href="../Home page/index.html" style="--i: 1">Home</a>
-            <a href="../Home page/" style="--i: 2">About us</a>
-            <a href="#services" style="--i: 3">Services</a>
-            <a href="#why-us" style="--i: 4">why-us ?</a>
-            <a href="#register" style="--i: 5">Register</a>
+            <a href="../Home page/index.html#About" style="--i: 2">About us</a>
+            <a href="../Home page/index.html#services" style="--i: 3">Services</a>
+            <a href="../Home page/index.html#why-us" style="--i: 4">why-us ?</a>
+            <a href="../Home page/index.html#register" style="--i: 5">Register</a>
             <a href="../Contact Us/contactus.html" target="_blank" style="--i: 6">Contact Us</a>
           </nav>
-
-        <div class="navbar-icons">
-            <button class="sign-up">Log-In</button>
-        </div>
     </header>
     <section class="ride-section">
         <div class="location-selection">
+            <h2>Enter Your Pick-Up and drop location</h2>
                 <label for="pickup">From</label>
-                <input type="text" id="pickup" value="Dakshineswar Kali Temple" required>
+                <input type="text" id="pickup"required>
                 <label for="drop">To</label>
-                <input type="text" id="drop" value="Soy Yum Experience Centre" required>
+                <input type="text" id="drop" required>
                 <label for="pickup-time">Pickup</label>
-                <input type="text" id="pickup-time" value="Pickup now" readonly>
-                <button id="find-route">Find Route</button>
-        </div>
-        <div class="ride-type">
-            <h2>Choose a ride</h2>
-            <div class="ride-card" id="uberGo">
-                <h3>Uber Go</h3>
-                <p>3 mins away • 10:25 PM</p>
-                <p class="price">₹437.82</p>
-                <p class="discount">25% off ₹477.82</p>
-                <button class="select-ride">Select</button>
-            </div>
-            <div class="ride-card" id="goSedan">
-                <h3>Go Sedan</h3>
-                <p>3 mins away • 10:26 PM</p>
-                <p class="price">₹485.73</p>
-                <p class="discount">25% off ₹525.73</p>
-                <button class="select-ride">Select</button>
-            </div>
-            <div class="ride-card" id="premier">
-                <h3>Premier</h3>
-                <p>2 mins away • 10:23 PM</p>
-                <p class="price">₹608.26</p>
-                <p class="discount">25% off ₹648.26</p>
-                <button class="select-ride">Select</button>
-            </div>
+                <input type="time" id="pickup-time" value="Pickup now" required>
+                <input type="submit" id="find-route" value="Request"></input>
         </div>
         <div id="map"></div>
     </section>
-
-    
     <footer class="main-footer">
         <div class="footer-heading">
         </div>
@@ -79,19 +51,19 @@
 
             <div class="footer-content">
                 <h1>Contents</h1>
-                <a href="#home">Home</a>
-                <a href="#About">About Us</a>
-                <a href="#">Safety</a>
-                <a href="../Privacy policy/index.html">Privacy Policy</a>git 
+                <a href="../Home page/index.html">Home</a>
+                <a href="../Home page/index.html#About">About Us</a>
+                <a href="../Safety/index.html">Safety</a>
+                <a href="../Privacy policy/index.html">Privacy Policy</a>
                 <a href="../Contact Us/contactus.html">Contact Us</a>
             </div>
 
             <div class="footer-content">
                 <h1>Travel</h1>
-                <a href="#Airport-Transfers">Airport</a>
-                <a href="#City-Rides">Cities</a>
-                <a href="#Outstation-Trips">outstations</a>
-                <a href="#Corporate-Services">corporate</a>
+                <a href="../Home page/index.html#Airport-Transfers">Airport</a>
+                <a href="../Home page/index.html#City-Rides">Cities</a>
+                <a href="../Home page/index.html#Outstation-Trips">outstations</a>
+                <a href="../Home page/index.html#Corporate-Services">corporate</a>
             </div>
 
             <div class="footer-content">
