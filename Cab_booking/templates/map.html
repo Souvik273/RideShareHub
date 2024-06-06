@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Cab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+    <script src="https://kit.fontawesome.com/c1df782baf.js" crossorigin="anonymous"></script>
+    <!-- Font awesome link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="{{ url_for('static', filename='logo2.png') }}" alt=""></div>
+
+        <nav class="navbar">
+            <a href="../Home page/index.html" style="--i: 1">Home</a>
+            <a href="../Home page/index.html#About" style="--i: 2">About us</a>
+            <a href="../Home page/index.html#services" style="--i: 3">Services</a>
+            <a href="../Home page/index.html#why-us" style="--i: 4">why-us ?</a>
+            <a href="../Home page/index.html#register" style="--i: 5">Register</a>
+            <a href="{{ url_for('contact_us') }}" target="_blank" style="--i: 6">Contact Us</a>
+          </nav>
+    </header>
+    <section class="ride-section">
+        <div class="location-selection">
+            <h2>Enter Your Pick-Up and drop location</h2>
+                <form id="form">
+                    <label for="pickup">From</label>
+                    <input type="text" id="pickup" value="Dakshineswar Kali Temple, Dakshineswar, Kolkata, West Bengal, India" required>
+                    <label for="drop">To</label>
+                    <input type="text" id="drop" value="South City Mall, Prince Anwar Shah Road, South City Complex, Jadavpur, Kolkata, West Bengal, India" required>
+                    <label for="pickup-time">Pickup</label>
+                    <input type="time" id="pickup-time" value="Pickup now" required>
+                    <input type="submit" id="find-route" value="Request"></input>
+                </form>
+        </div>
+        <div id="ride-selection"></div>
+        <div id="map"></div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-heading">
+        </div>
+
+        <div class="main-inner-footer">
+            <div class="footer-content">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="">
+                <p class="logo-text">Call Us 24/7 Anytime</p>
+            </div>
+
+            <div class="footer-content">
+                <h1>Contents</h1>
+                <a href="../Home page/index.html">Home</a>
+                <a href="../Home page/index.html#About">About Us</a>
+                <a href="../Safety/index.html">Safety</a>
+                <a href="../Privacy policy/index.html">Privacy Policy</a>
+                <a href="{{ url_for('contact_us') }}">Contact Us</a>
+            </div>
+
+            <div class="footer-content">
+                <h1>Travel</h1>
+                <a href="../Home page/index.html#Airport-Transfers">Airport</a>
+                <a href="../Home page/index.html#City-Rides">Cities</a>
+                <a href="../Home page/index.html#Outstation-Trips">outstations</a>
+                <a href="../Home page/index.html#Corporate-Services">corporate</a>
+            </div>
+
+            <div class="footer-content">
+                <h1>Follow us</h1>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG2KErsdTLJsnd2KnE-k65iHZH6q2YjHE&libraries=places"></script>
+    <script src="{{ url_for('static', filename='map.js') }}"></script>
+</body>
+</html>

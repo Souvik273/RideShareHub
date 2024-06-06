@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontawesome link -->
+    <script src="https://kit.fontawesome.com/c1df782baf.js" crossorigin="anonymous"></script>
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new_style.css') }}">
+
+    <!-- Font awesome link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="{{ url_for('static', filename='logo2.png') }}" alt=""></div>
+
+        <nav class="navbar">
+            <a href="#home" style="--i: 1">Home</a>
+            <a href="#About" style="--i: 2">About us</a>
+            <a href="#services" style="--i: 3">Services</a>
+            <a href="#why-us" style="--i: 4">why-us ?</a>
+            <a href="#register" style="--i: 5">Register</a>
+            <a href="{{ url_for('contact_us') }}" target="_blank" style="--i: 6">Contact Us</a>
+          </nav>
+
+        <div class="navbar-icons">
+            <button class="sign-up"><i class="fa-solid fa-clipboard-question"></i>Ask AI</button>
+        </div>
+    </header>
+
+<!-- Home section starting -->
+
+    <section id="home" class="main-home">
+        <div class="home-inner-contect">
+
+            <d class="home-content">
+
+                <h3>Hire your best driver</h3>
+
+                <h1>Trusted and <span>Cheapest Taxi</span> <br>
+                company service
+                </h1>
+                <h2>Ride-Share-Hub</h2>
+
+                <button class="important-btn" id="book-cab">Book a cab</button>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- home section ended -->
+
+    <!-- Our business partner -->
+
+    <section id="About" class="about-us">
+
+        <div class="main-about">
+            <div class="inner-about"><img src="{{ url_for('static', filename='driver3.jpg') }}" alt=""></div>
+            <div class="inner-about">
+                <div class="about-content">
+                    <h3>About our company</h3>
+                    <h1>Welcome to Ride-Share-Hub Cab Booking</h1>
+
+                    <div class="paragraph">
+                        <p>At Ride-Share-Hub, we are dedicated to transforming the way you travel. We provide a reliable, efficient, and convenient cab booking service that connects passengers with a network of professional drivers. Whether you need a ride to the airport, a quick trip across town, or a leisurely drive to explore new destinations, FastRide is here to get you where you need to go.</p>
+                        <h4><span>Ride-Share-Hub</span></h4>
+                    </div>
+
+                    <div class="contact-with-us">
+                        <div  class="fa-solid fa-phone phone"> </div>
+                        <div class="contact-inner-content">
+                            <h4>Call us 24/7 <span>anytime</span></h4>
+                            <h4>+91 7478163464</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- our services -->
+
+
+    <section id="services" class="our-service">
+        <div class="service-heading">
+            <h3>Our services</h3>
+            <h1>what we are offering</h1>
+        </div>
+
+        <div id="Airport-Transfers" class="main-inner-service">
+            <div class="inner-service-content">
+                <div class="service-img">
+                    <img src="{{ url_for('static', filename='service1.jpg') }}" alt="">
+                </div>
+                <div class="service-out">
+                    <div class="service-main-content">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <div class="service-content-inside">
+                            <h2 class="service-title">Airport Transfers</h2>
+                            <p class="service-text">Timely pickups and drop-offs at all major airports.</p>
+                            <a class="service-btn" href="{{ url_for('contact_us') }}">Contact us</a>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>
+
+            
+            <div id="City-Rides" class="inner-service-content">
+                <div class="service-img">
+                    <img src="{{ url_for('static', filename='service4.jpg') }}" alt="">
+                </div>
+                <div class="service-out">
+                    <div class="service-main-content">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <div class="service-content-inside">
+                            <h2 class="service-title">City Rides</h2>
+                            <p class="service-text">Quick and comfortable rides within the city.</p>
+                            <a class="service-btn" href="{{ url_for('contact_us') }}">Contact us</a>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>
+
+
+            <div id="Outstation-Trips" class="inner-service-content">
+                <div class="service-img">
+                    <img src="{{ url_for('static', filename='service3.jpg') }}" alt="">
+                </div>
+                <div class="service-out">
+                    <div class="service-main-content">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <div class="service-content-inside">
+                            <h2 class="service-title">Outstation Trips</h2>
+                            <p class="service-text">Affordable and convenient outstation travel.</p>
+                            <a class="service-btn" href="{{ url_for('contact_us') }}">Contact us</a>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>
+
+            <div class="inner-service-content">
+                <div class="service-img">
+                    <img src="{{ url_for('static', filename='driver1.jpg') }}" alt="">
+                </div>
+                <div class="service-out">
+                    <div class="service-main-content">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <div class="service-content-inside">
+                            <h2 class="service-title">24/7 Availability</h2>
+                            <p class="service-text"> Need a ride at any time of the day or night? Ride-Share-Hub is available round the clock to serve you.</p>
+                            <a class="service-btn" href="{{ url_for('contact_us') }}">Contact us</a>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>
+
+            <div class="inner-service-content">
+                <div class="service-img">
+                    <img src="{{ url_for('static', filename='driver6.jpg') }}" alt="">
+                </div>
+                <div id="Corporate-Services" class="service-out">
+                    <div class="service-main-content">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <div class="service-content-inside">
+                            <h2 class="service-title">Corporate Services</h2>
+                            <p class="service-text">Tailored solutions for corporate clients and business travelers.</p>
+                            <a class="service-btn" href="{{ url_for('contact_us') }}">Contact us</a>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>
+            
+            <div class="inner-service-content">
+                <div class="service-img">
+                    <img src="{{ url_for('static', filename='service3.jpg') }}" alt="">
+                </div>
+                <div class="service-out">
+                    <div class="service-main-content">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <div class="service-content-inside">
+                            <h2 class="service-title">Special Occasions</h2>
+                            <p class="service-text">Luxury rides for weddings, parties, and other special events.</p>
+                            <a class="service-btn" href="{{ url_for('contact_us') }}">Contact us</a>
+                        </div>
+                    </div>
+                </div>  
+
+            </div>
+            
+        </div>
+
+    </section>
+
+
+        <!-- Why Choose -->
+
+    <section id="why-us" class="main-trip">
+            
+            <div class="main-trip-heading">
+                <h1>Why Choose <span>Ride-Share-Hub ?</span></h1>
+            </div>
+
+            <div class="main-trip-box">
+
+                <div class="main-trip-inner-box">
+                        <img src="{{ url_for('static', filename='driver1.jpg') }}" alt="">
+
+                    <div class="trip-content">
+                        <i class="fa-solid fa-car"></i>
+                        <h2>Easy Online Booking</h2>
+                        <p> With our intuitive web interface, booking a cab has never been simpler. Just a few clicks, and you're ready to go!</p>
+                    </div>
+
+                </div>
+
+                <div class="main-trip-inner-box">
+                 
+                        <img src="{{ url_for('static', filename='driver2.jpg') }}" alt="">
+                  
+
+                    <div class="trip-content">
+                        <i class="fa-solid fa-car"></i>
+                        <h2>Professional Drivers</h2>
+                        <p>Our drivers are experienced, courteous, and thoroughly vetted to ensure your safety and comfort.</p>
+                    </div>
+
+                </div>
+
+                <div class="main-trip-inner-box">
+                   
+                        <img src="{{ url_for('static', filename='driver3.jpg') }}" alt="">
+                   
+
+                    <div class="trip-content">
+                        <i class="fa-solid fa-car"></i>
+                        <h2>Diverse Fleet</h2>
+                        <p>From standard sedans to luxury vehicles, we have a wide range of cars to suit every need and budget.</p>
+                    </div>
+
+                </div>
+
+                <div class="main-trip-inner-box">
+                   
+                    <img src="{{ url_for('static', filename='driver4.jpg') }}" alt="">
+               
+
+                <div class="trip-content">
+                    <i class="fa-solid fa-car"></i>
+                    <h2>24/7 Availability</h2>
+                    <p> Need a ride at any time of the day or night? FastRide is available round the clock to serve you.</p>
+                </div>
+
+            </div>
+
+            <div class="main-trip-inner-box">
+                   
+                <img src="{{ url_for('static', filename='driver6.jpg') }}" alt="">
+           
+
+            <div class="trip-content">
+                <i class="fa-solid fa-car"></i>
+                <h2>Real-Time Tracking</h2>
+                <p>Track your ride in real-time and stay informed about your driver’s location and estimated arrival time.</p>
+            </div>
+
+        </div>
+
+        <div class="main-trip-inner-box">
+                   
+            <img src="{{ url_for('static', filename='driver7.jpg') }}" alt="">
+       
+
+        <div class="trip-content">
+            <i class="fa-solid fa-car"></i>
+            <h2>Secure Payments</h2>
+            <p>Multiple payment options, including cashless payments, ensure a hassle-free transaction.</p>
+        </div>
+
+    </div>
+    </div>
+    </section>
+
+    <section class="register" id="register">
+
+        <h1 class="heading"> <span>Register</span> now </h1>
+    
+        <div class="row">
+    
+            <form action="" class="myform">
+    
+                <div class="inputBox">
+                    <input type="text" placeholder="Username">
+                    <input type="text" placeholder="name">
+                </div>
+    
+                <div class="inputBox">
+                    <input type="number" placeholder="number">
+                    <input type="email" placeholder="mail">
+                </div>
+                
+                <div class="inputBox">
+                    <input type="password" placeholder="password">
+                </div>
+    
+                <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
+    
+                <input type="submit" value="Register now" class="btn">
+    
+            </form>
+    
+            <div class="image footer-image">
+                <img src="{{ url_for('static', filename='comfort.jpg') }}" alt="">
+            </div>
+    
+        </div>
+    
+    </section>
+
+
+    <footer class="main-footer">
+        <div class="footer-heading">
+        </div>
+
+        <div class="main-inner-footer">
+            <div class="footer-content">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="">
+                <p class="logo-text">Call Us 24/7 Anytime</p>
+            </div>
+
+            <div class="footer-content">
+                <h1>Contents</h1>
+                <a href="#home">Home</a>
+                <a href="#About">About Us</a>
+                <a href="{{ url_for('safety') }}">Safety</a>
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+                <a href="{{ url_for('contact_us') }}">Contact Us</a>
+            </div>
+
+            <div class="footer-content">
+                <h1>Travel</h1>
+                <a href="#Airport-Transfers">Airport</a>
+                <a href="#City-Rides">Cities</a>
+                <a href="#Outstation-Trips">outstations</a>
+                <a href="#Corporate-Services">corporate</a>
+            </div>
+
+            <div class="footer-content">
+                <h1>Follow us</h1>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <button id="scrollTopBtn">↑</button>
+
+    <script src="{{ url_for('static', filename='scripts/new_script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/new_style_cu.css')}}">
+</head>
+<body>
+    <section class="contact">
+        <h2>Contact Us!</h2>
+        <form action="/submit_contactus" method="post">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="full_name" name="full_name" class="item" autocomplete="off">
+                    <div class="error-text">Full Name can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="Email Address" id="email_address" name="email_address" class="item" autocomplete="off">
+                    <div class="error-text">Email Address can't be blank</div>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="number" placeholder="Phone Number" id="phone_no" name="phone_no" class="item" autocomplete="off">
+                    <div class="error-text">Phone number can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" name="subject" class="item" autocomplete="off">
+                    <div class="error-text">Subject can't be blank</div>
+                </div>
+            </div>
+            <div class="textarea-field field">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                <div class="error-text">Message can't be blank</div>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
